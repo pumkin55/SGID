@@ -1,0 +1,133 @@
+# This project was generated with 0.3.16 using template: https://github.com/beeware/briefcase-template@v0.3.16
+[tool.briefcase]
+project_name = "sgid"
+bundle = "com.example"
+version = "0.0.1"
+url = "https://example.com/sgid"
+license = "BSD license"
+author = "Raikol Alvarez Leon"
+author_email = "raikol@example.com"
+
+[tool.briefcase.app.sgid]
+formal_name = "sgid"
+description = "My first application"
+long_description = """More details about the app should go here.
+"""
+icon = "src/sgid/resources/sgid/"
+sources = [
+    "src/sgid",
+]
+test_sources = [
+    "tests",
+]
+
+requires = [
+    "PySide6-Essentials~=6.5",
+    # "PySide6-Addons~=6.5",
+    "XlsxWriter~=3.1.9",
+    "SQLAlchemy~=2.0.25",
+    "pyzbar~=0.1.9",
+    "numpy~=1.26.3",
+    "opencv-python~=4.9.0.80",
+]
+test_requires = [
+    "pytest",
+]
+
+[tool.briefcase.app.sgid.macOS]
+universal_build = true
+requires = [
+    "std-nslog~=1.0.0"
+]
+
+[tool.briefcase.app.sgid.linux]
+requires = [
+]
+
+[tool.briefcase.app.sgid.linux.system.debian]
+system_requires = [
+]
+
+system_runtime_requires = [
+    # Derived from https://doc.qt.io/qt-6/linux-requirements.html
+    "libxrender1",
+    "libxcb-render0",
+    "libxcb-render-util0",
+    "libxcb-shape0",
+    "libxcb-randr0",
+    "libxcb-xfixes0",
+    "libxcb-xkb1",
+    "libxcb-sync1",
+    "libxcb-shm0",
+    "libxcb-icccm4",
+    "libxcb-keysyms1",
+    "libxcb-image0",
+    "libxcb-util1",
+    "libxkbcommon0",
+    "libxkbcommon-x11-0",
+    "libfontconfig1",
+    "libfreetype6",
+    "libxext6",
+    "libx11-6",
+    "libxcb1",
+    "libx11-xcb1",
+    "libsm6",
+    "libice6",
+    "libglib2.0-0",
+    "libgl1",
+    "libegl1-mesa",
+    "libdbus-1-3",
+    "libgssapi-krb5-2",
+]
+
+[tool.briefcase.app.sgid.linux.system.rhel]
+system_requires = [
+]
+
+system_runtime_requires = [
+    "qt6-qtbase-gui",
+]
+
+[tool.briefcase.app.sgid.linux.system.suse]
+system_requires = [
+]
+
+system_runtime_requires = [
+    "libQt6Gui6",
+]
+
+[tool.briefcase.app.sgid.linux.system.arch]
+system_requires = [
+    "qt6-base",
+]
+
+system_runtime_requires = [
+    "qt6-base",
+]
+
+[tool.briefcase.app.sgid.linux.appimage]
+manylinux = "manylinux_2_28"
+
+system_requires = [
+# ?? FIXME
+]
+linuxdeploy_plugins = []
+
+[tool.briefcase.app.sgid.linux.flatpak]
+flatpak_runtime = "org.kde.Platform"
+flatpak_runtime_version = "6.4"
+flatpak_sdk = "org.kde.Sdk"
+
+[tool.briefcase.app.sgid.windows]
+requires = []
+
+# Mobile deployments
+[tool.briefcase.app.sgid.iOS]
+supported = false
+
+[tool.briefcase.app.sgid.android]
+supported = false
+
+# Web deployments
+[tool.briefcase.app.sgid.web]
+supported = false
